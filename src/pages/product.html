@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="View product details and buy from Brilliance Clothing" />
+    <meta name="keywords" content="product, streetwear, buy now, clothing" />
+    <title>Product Details - Brilliance</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../../public/favicon.ico" />
+
+    <!-- Font Awesome for Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/output.css" />
+  </head>
+  <body data-page="product">
+    <!-- Header Container -->
+    <div id="header-container"></div>
+
+    <!-- Product Details Section -->
+    <section class="container mx-auto px-4 py-12">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <!-- Product Images -->
+        <div>
+          <div class="mb-4">
+            <img
+              id="main-image"
+              src=""
+              alt="Product Image"
+              class="w-full rounded-lg shadow-lg" />
+          </div>
+          <div id="thumbnails" class="flex gap-2 overflow-x-auto">
+            <!-- Thumbnail images will be loaded by JavaScript -->
+          </div>
+        </div>
+
+        <!-- Product Info -->
+        <div>
+          <h1 id="product-name" class="text-4xl font-bold mb-4">
+            Product Name
+          </h1>
+          <p id="product-price" class="text-3xl font-bold text-gray-800 mb-6">
+            R0.00
+          </p>
+
+          <!-- Product Options -->
+          <div class="space-y-4 mb-6">
+            <!-- Size Selection -->
+            <div>
+              <label for="size-select" class="block text-lg font-semibold mb-2"
+                >Size:</label
+              >
+              <select
+                id="size-select"
+                class="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-black">
+                <option>Small</option>
+              </select>
+            </div>
+
+            <!-- Color Selection -->
+            <div>
+              <label for="color-select" class="block text-lg font-semibold mb-2"
+                >Color:</label
+              >
+              <select
+                id="color-select"
+                class="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-black">
+                <option>Black</option>
+              </select>
+            </div>
+
+            <!-- Quantity Selection -->
+            <div>
+              <label
+                for="quantity-select"
+                class="block text-lg font-semibold mb-2"
+                >Quantity:</label
+              >
+              <select
+                id="quantity-select"
+                class="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-black">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Buy Button -->
+          <button
+            onclick="handleBuyNow()"
+            class="w-full bg-green-600 hover:bg-green-700 text-white font-bold text-lg py-4 rounded-lg transition">
+            Buy Now via WhatsApp
+          </button>
+
+          <!-- Product Details -->
+          <div class="mt-8 p-6 bg-black text-white rounded-lg">
+            <p id="product-fit" class="text-xl font-bold mb-2">
+              FIT | OVERSIZE
+            </p>
+            <p id="product-description" class="text-base">
+              Product description will be loaded here.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Divider -->
+    <hr class="container mx-auto border-t-4 border-gray-800 my-12" />
+
+    <!-- Recommendations Section -->
+    <section class="container mx-auto px-4 py-12">
+      <h2 class="text-3xl font-bold text-center mb-8">You May Also Like</h2>
+      <div
+        id="recommendations"
+        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Recommended products will be loaded by JavaScript -->
+      </div>
+    </section>
+
+    <!-- Footer Container -->
+    <div id="footer-container"></div>
+
+    <!-- JavaScript Files -->
+    <script src="../utils/helpers.js"></script>
+    <script src="../js/components.js"></script>
+    <script src="../js/app.js"></script>
+  </body>
+</html>
