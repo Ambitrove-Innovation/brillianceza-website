@@ -1,4 +1,4 @@
-// src/js/main.js - Main application logic
+// src/js/app.js - Main application logic
 
 // ===== CONFIGURATION =====
 const CONFIG = {
@@ -417,14 +417,14 @@ function initProductPage() {
   const productId = urlParams.get("id");
 
   if (!productId) {
-    window.location.href = "../pages/index.html";
+    window.location.href = "index.html";
     return;
   }
 
   currentProduct = getProductById(productId);
 
   if (!currentProduct) {
-    window.location.href = "../pages/index.html";
+    window.location.href = "index.html";
     return;
   }
 
@@ -507,7 +507,9 @@ function renderProductGrid(container, products) {
       (product) => `
     <a href="product.html?id=${product.id}" class="product-link block">
       <div class="product-card bg-white border rounded-lg p-4 hover:shadow-lg transition">
-        <img  loading src="${CONFIG.imagePath}${product.images[0]}" alt="${
+        <img loading="lazy" src="${CONFIG.imagePath}${
+        product.images[0]
+      }" alt="${
         product.name
       }" class="product-image w-full h-64 object-cover mb-4 rounded">
         <p class="font-bold text-center mb-2">${product.name}</p>
