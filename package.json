@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build": "tailwindcss -i ./src/css/tailwind.css -o ./src/css/output.css --minify",
     "dev": "npx tailwindcss -i ./src/css/tailwind.css -o ./src/css/output.css --watch"
   },
   "repository": {
