@@ -19,7 +19,11 @@
   },
   "homepage": "https://github.com/Ambitrove-Innovation/brillianceza-website#readme",
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "@tailwindcss/cli": "^4.1.16",
+    "dotenv": "^17.2.3"
+  },
+  "devDependencies": {
     "tailwindcss": "^4.1.16"
   }
 }
